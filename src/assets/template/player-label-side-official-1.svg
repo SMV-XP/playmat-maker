@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="346" height="48" viewBox="0 0 346 48" role="img" aria-label="Player 1">
+  <style>
+    .label {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 31px;
+      font-weight: 900;
+      font-stretch: condensed;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  </style>
+  <path fill="#fff" d="M0 0h199l42 48H0z" />
+  <g fill="#fff">
+    <path d="M213 0h25l42 48h-25z" />
+    <path d="M247 0h25l42 48h-25z" />
+    <path d="M281 0h25l40 46v2h-23z" />
+  </g>
+  <text class="label" x="101" y="25" fill="#000">PLAYER1</text>
+</svg>
