@@ -2,7 +2,7 @@
 
 Editor de escritorio para diseñar playmats personalizados de **Digimon Card Game**. Trabaja sobre el tamaño original de la plantilla —**3675 × 2175 px**— y puede exportar directamente a resolución de imprenta.
 
-![Vista general de Playmat Maker](docs/images/playmat-maker-overview.png)
+![Vista general de Playmat Maker](docs/images/playmat-maker-overview-aligned.png)
 
 ## Descargar y ejecutar
 
@@ -30,13 +30,13 @@ Seleccioná una zona en el lienzo o en la lista **Capas**. Los controles lateral
 
 Los presets **Security Stack**, **Breeding area**, **Battle area**, **Deck**, **Trash** y **Turn Order** conservan las proporciones de la plantilla original. También podés agregar una zona personalizada.
 
-![Edición de una zona del playmat](docs/images/playmat-maker-zone-editor.png)
+![Edición de una zona del playmat](docs/images/playmat-maker-zone-editor-aligned.png)
 
 ### 3. Personalizar el Memory Gauge
 
 Elegí **Memory Gauge** en la lista de capas y abrí la pestaña **Medidor**. Podés seleccionar el diseño, cambiar los colores de ambos lados y sus textos, ajustar posición, ancho y opacidad sin perder la geometría del medidor.
 
-![Personalización del Memory Gauge](docs/images/playmat-maker-memory-gauge.png)
+![Personalización del Memory Gauge](docs/images/playmat-maker-memory-gauge-aligned.png)
 
 ### 4. Agregar logos
 
