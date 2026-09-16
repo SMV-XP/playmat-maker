@@ -83,10 +83,31 @@ export function createDefaultProject(): PlaymatProject {
       zone('Security Stack', 'stack', 0, 348, 583, 890, { ...psdAppearance('security'), fontSize: 64 }),
       zone('Breeding area', 'breeding', 96, 1288, 1009, 781, { ...psdAppearance('breeding'), fontSize: 60 }),
       zone('Battle area', 'banner', 1514, 543, 648, 179, { ...psdAppearance('battle'), fontSize: 60 }),
-      zone('Deck', 'frame', 3156, 461, 435, 595, { ...psdAppearance('deck'), fontSize: 54 }),
-      zone('Trash', 'frame', 3156, 1120, 435, 596, { ...psdAppearance('trash'), fontSize: 54 }),
-      zone('Turn Order', 'frame', 3044, 1599, 465, 469, { ...psdAppearance('turn-order'), fontSize: 24 }),
+      zone('Deck', 'frame', 3156, 348, 435, 595, { ...psdAppearance('deck'), fontSize: 54 }),
+      zone('Trash', 'frame', 3156, 992, 435, 596, { ...psdAppearance('trash'), fontSize: 54 }),
+      zone('Turn Order', 'frame', 3140, 1640, 465, 469, { ...psdAppearance('turn-order'), fontSize: 24 }),
     ],
+    logos: [],
+  }
+}
+
+export const PLAYMAT_PRESETS = {
+  all: 'Todos los elementos',
+  withoutTurnOrder: 'Sin Turn Order',
+  gaugeOnly: 'Solo Memory Gauge',
+  empty: 'Vacío',
+} as const
+
+export type PlaymatPresetKey = keyof typeof PLAYMAT_PRESETS
+
+export function applyPlaymatPreset(project: PlaymatProject, key: PlaymatPresetKey): PlaymatProject {
+  const defaults = createDefaultProject()
+  return {
+    ...project,
+    zones: key === 'empty' || key === 'gaugeOnly'
+      ? []
+      : defaults.zones.filter((zone) => key !== 'withoutTurnOrder' || zone.template !== 'turn-order'),
+    gauge: { ...defaults.gauge, visible: key !== 'empty' },
     logos: [],
   }
 }

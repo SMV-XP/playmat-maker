@@ -7,7 +7,7 @@ Editor de escritorio para diseñar playmats personalizados de **Digimon Card Gam
 ## Descargar y ejecutar
 
 1. Abrí la sección [Releases](https://github.com/SantiVaras/playmat-maker/releases).
-2. Descargá `Playmat-Maker-1.2.0-Portable.exe` desde la versión más reciente.
+2. Descargá `Playmat-Maker-1.3.0-Portable.exe` desde la versión más reciente.
 3. Ejecutá el archivo. Es portable: no requiere instalación, Node.js ni npm.
 
 > Windows puede mostrar una advertencia de SmartScreen si el ejecutable no está firmado con un certificado reconocido. Verificá que el archivo provenga de este repositorio y compará su SHA-256 con `SHA256SUMS.txt` incluido en el release.
@@ -81,4 +81,14 @@ Para generar el ejecutable portable:
 npm run build
 ```
 
-El artefacto se crea en `release/Playmat-Maker-1.2.0-Portable.exe`.
+El artefacto se crea en `release/Playmat-Maker-1.3.0-Portable.exe`.
+
+### Organización del código
+
+Consultá la [guía de estructura y mantenimiento](docs/architecture.md) para ubicar componentes, lógica del editor, estilos y operaciones de Electron.
+
+Para comprobar los flujos principales en una ventana oculta de Electron:
+
+```bash
+npm run test:smoke
+```

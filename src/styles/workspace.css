@@ -1,0 +1,19 @@
+.workspace { position: relative; display: grid; grid-template-rows: 38px minmax(0, 1fr); min-width: 0; min-height: 0; overflow: hidden; background-color: #090d13; background-image: linear-gradient(#121922 1px, transparent 1px), linear-gradient(90deg, #121922 1px, transparent 1px); background-size: 22px 22px; }
+.workspace-meta { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid rgba(32,44,57,.7); background: rgba(9,13,19,.83); backdrop-filter: blur(6px); color: #607184; font-size: 8px; font-weight: 700; letter-spacing: .13em; }
+.workspace-meta strong { margin-left: 6px; color: #9cacbc; font-weight: 600; letter-spacing: .03em; }
+.workspace-status { display: flex; align-items: center; max-width: 45%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: .02em; }
+.workspace-status i { width: 5px; height: 5px; margin-right: 6px; border-radius: 50%; background: #56d7a2; box-shadow: 0 0 7px #56d7a2; }
+.canvas-scroll { display: grid; place-items: center; min-height: 0; padding: 24px 28px 56px; overflow: auto; }
+.canvas-frame { position: relative; flex: none; background: #111; box-shadow: 0 20px 65px rgba(0,0,0,.62), 0 0 0 1px rgba(255,255,255,.09); transition: box-shadow .18s ease; }
+.canvas-frame canvas { display: block; }
+.canvas-frame.is-dragging-file { box-shadow: 0 0 0 3px var(--accent), 0 20px 70px rgba(0,0,0,.7), 0 0 45px rgba(92,225,230,.25); }
+.canvas-frame.is-background-mode canvas { cursor: grab; }
+.canvas-frame.is-background-mode canvas:active { cursor: grabbing; }
+.drop-hint { position: absolute; inset: 16px; display: grid; place-items: center; color: #eaffff; background: rgba(9,26,34,.78); border: 2px dashed var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .02em; pointer-events: none; backdrop-filter: blur(2px); }
+.background-move-hint { position: absolute; top: 14px; left: 50%; padding: 7px 12px; transform: translateX(-50%); color: #082124; background: rgba(92,225,230,.92); border-radius: 7px; box-shadow: 0 7px 24px rgba(0,0,0,.35); font-size: 9px; font-weight: 800; pointer-events: none; }
+.canvas-controls { position: absolute; bottom: 14px; left: 50%; display: flex; align-items: center; gap: 4px; height: 38px; padding: 4px; transform: translateX(-50%); background: rgba(13,20,30,.93); border: 1px solid #273543; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.42); backdrop-filter: blur(8px); }
+.canvas-controls button { height: 28px; padding: 0 9px; color: #8fa0b2; background: transparent; border: 0; border-radius: 6px; font-size: 9px; font-weight: 700; cursor: pointer; }
+.canvas-controls button:hover, .canvas-controls button.active { color: var(--accent); background: #172531; }
+.canvas-controls span { width: 1px; height: 18px; margin: 0 3px; background: #283645; }
+.canvas-controls strong { min-width: 38px; color: #bdc9d4; font-size: 9px; text-align: center; }
+
